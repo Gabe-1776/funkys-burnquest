@@ -1,0 +1,36 @@
+# --- Build / deps ---
+node_modules/
+package-lock.json
+build/
+
+# --- Dev artifacts (live on disk, NOT in git) ---
+test-shots/
+post-build-review-*.md
+SECURITY-REVIEW-FLAGS.md
+*.zip
+tools/DEVIN-TICKET-*.md
+
+# --- Dev snapshots / screenshots / stray sources ---
+.versions/
+**/.versions/
+polish/
+src/
+.img2/
+.img2threejs/
+polish-viewer.html
+
+# --- Python ---
+__pycache__/
+*.pyc
+
+# --- OS ---
+.DS_Store
+._*
+*.bak
+*.blend*
+
+# --- Session handoffs (keep out of git) ---
+docs/HANDOFF-*.md
+docs/PROGRESS-*.md
+docs/handoff-review.md
+docs/X-BOOKMARKS-*.md

@@ -1,0 +1,28 @@
+# Funky's BurnQuest — LLM / agent entrypoint
+
+Frogger-style arcade game with a token-burn campaign wrapper.
+Vanilla JS, no build step, Three.js r0.160 UMD self-hosted.
+
+## Read first
+- `AGENTS.md` — full agent guide (structure, grid, stages, traps, gates)
+- `README.md` — human quick start
+
+## Do
+- Small, reviewable patches. Owner is Mimi.
+- Prefer editing `sim.js` / `render3d.js` / `game.js` / `style.css` / `index.html`.
+- Run headless gates before claiming a fix: `node tools/sim-contract-test.js`
+- Serve locally with `python3 -m http.server 8099` (no bundler).
+
+## Do not
+- Do not deploy unless the human gives an explicit host and asks.
+- Do not deploy to `ksto.world` (Mimi's production Hostinger site).
+- Do not rewrite the renderer or swap Three.js versions.
+- Do not normalize line endings repo-wide (mixed CRLF/LF by design).
+- Do not regenerate Meshy/Blender assets unless asked (`tools/` pipeline).
+- Do not commit `test-shots/`, `node_modules/`, zips, or `.versions/`.
+
+## Live test (not production)
+https://funkyburnquest.project-testing.xyz/
+
+## Branch
+Default working branch: `v1.2`

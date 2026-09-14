@@ -1,0 +1,15 @@
+{
+  "name": "Funky's BurnQuest",
+  "short_name": "BurnQuest",
+  "description": "Frogger-style arcade tied to a community token-burn campaign.",
+  "start_url": "./index.html?render=3d",
+  "scope": "./",
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "standalone"],
+  "orientation": "any",
+  "background_color": "#0a001f",
+  "theme_color": "#0a001f",
+  "icons": [
+    { "src": "assets/coins/ksto.png", "sizes": "128x128", "type": "image/png", "purpose": "any" }
+  ]
+}
