@@ -1,9 +1,11 @@
 """Render Meshy's KSTO medallion straight-on to a square PNG for coin faces."""
 import bpy
 import mathutils
+import os
 
-SRC = "/Users/felix/Developer/funkys-burnquest/test-shots/coins/ksto/ksto-meshy.glb"
-RENDER = "/Users/felix/Developer/funkys-burnquest/test-shots/coins/ksto/ksto-face.png"
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+SRC = os.path.join(ROOT, "test-shots", "coins", "ksto", "ksto-meshy.glb")
+RENDER = os.path.join(ROOT, "test-shots", "coins", "ksto", "ksto-face.png")
 
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete(use_global=False)

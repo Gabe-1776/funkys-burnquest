@@ -1,4 +1,5 @@
-const { chromium } = require('/Users/felix/Developer/funkys-burnquest/node_modules/playwright');
+const path = require('path');
+const { chromium } = require('playwright');
 const debugURL = require('./lib/debug-url');
 (async () => {
   const b = await chromium.launch();
@@ -19,7 +20,7 @@ const debugURL = require('./lib/debug-url');
     await p.waitForTimeout(230);
   }
   await p.waitForTimeout(1500);
-  await p.screenshot({ path: '/Users/felix/Developer/funkys-burnquest/test-shots/cars-closeup.png' });
+  await p.screenshot({ path: path.resolve(__dirname, '..', 'test-shots', 'cars-closeup.png') });
   const cols = await p.evaluate(() => {
     // sample the rendered canvas for the dominant saturated colours actually on screen
     const c = document.getElementById('game-canvas');

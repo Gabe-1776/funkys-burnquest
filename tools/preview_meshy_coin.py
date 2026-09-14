@@ -3,9 +3,11 @@ import bpy
 import os
 import math
 
-BLEND_COIN = "/Users/felix/Developer/funkys-burnquest/test-shots/coins/ksto/ksto-coin.glb"
-MESHY_COIN = "/Users/felix/Developer/funkys-burnquest/test-shots/coins/ksto/ksto-meshy.glb"
-RENDER = "/Users/felix/Developer/funkys-burnquest/test-shots/coins/ksto/ksto-vs-meshy.png"
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+COIN_DIR = os.path.join(ROOT, "test-shots", "coins", "ksto")
+BLEND_COIN = os.path.join(COIN_DIR, "ksto-coin.glb")
+MESHY_COIN = os.path.join(COIN_DIR, "ksto-meshy.glb")
+RENDER = os.path.join(COIN_DIR, "ksto-vs-meshy.png")
 
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete(use_global=False)
